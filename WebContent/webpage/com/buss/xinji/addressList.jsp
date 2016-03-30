@@ -3,7 +3,7 @@
 <t:base type="jquery,easyui,tools,DatePicker"></t:base>
 <div class="easyui-layout" fit="true">
   <div region="center" style="padding:1px;">
-  <t:datagrid name="addressList" title="地址" actionUrl="addressController.do?datagrid" idField="id" fit="true">
+  <t:datagrid name="addressList" title="地址管理" actionUrl="addressController.do?datagrid" idField="id" fit="true">
    <t:dgCol title="编号" field="id" hidden="true"></t:dgCol>
    <t:dgCol title="会员" field="memberPhone"   width="120"></t:dgCol>
    <t:dgCol title="收货人姓名" field="contactUser"   width="120"></t:dgCol>

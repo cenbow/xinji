@@ -3,7 +3,7 @@
 <t:base type="jquery,easyui,tools,DatePicker"></t:base>
 <div class="easyui-layout" fit="true">
   <div region="center" style="padding:1px;">
-  <t:datagrid name="visitCardList" title="辛集名片管理" actionUrl="visitCardController.do?datagrid" idField="id" fit="true">
+  <t:datagrid name="visitCardList" title="辛集名片" actionUrl="visitCardController.do?datagrid" idField="id" fit="true">
    <t:dgCol title="编号" field="id" hidden="true"></t:dgCol>
    <t:dgCol title="标题" field="title"   width="120"></t:dgCol>
    <t:dgCol title="缩略图" field="thumbnail"   width="120"></t:dgCol>

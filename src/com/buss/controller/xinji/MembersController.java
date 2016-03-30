@@ -18,10 +18,12 @@ import org.jeecgframework.core.common.model.json.AjaxJson;
 import org.jeecgframework.core.common.model.json.DataGrid;
 import org.jeecgframework.core.constant.Globals;
 import org.jeecgframework.core.util.StringUtil;
+import org.jeecgframework.core.util.oConvertUtils;
 import org.jeecgframework.tag.core.easyui.TagUtil;
 import org.jeecgframework.web.system.pojo.base.TSDepart;
 import org.jeecgframework.web.system.service.SystemService;
 import org.jeecgframework.core.util.MyBeanUtils;
+import org.jeecgframework.core.util.PasswordUtil;
 
 import com.buss.entity.xinji.MembersEntity;
 import com.buss.service.xinji.MembersServiceI;
@@ -115,6 +117,13 @@ public class MembersController extends BaseController {
   @ResponseBody
   public AjaxJson save(MembersEntity members, HttpServletRequest request) {
     AjaxJson j = new AjaxJson();
+    
+    String phone = oConvertUtils.getString(request.getParameter("phone"));
+    String password = oConvertUtils.getString(request.getParameter("password"));
+    //密码加密
+    String pString = PasswordUtil.encrypt(password, phone, PasswordUtil.getStaticSalt());
+    members.setPassword(pString);
+    
     if (StringUtil.isNotEmpty(members.getId())) {
       message = "会员更新成功";
       MembersEntity t = membersService.get(MembersEntity.class, members.getId());
@@ -144,6 +153,9 @@ public class MembersController extends BaseController {
   public ModelAndView addorupdate(MembersEntity members, HttpServletRequest req) {
     if (StringUtil.isNotEmpty(members.getId())) {
       members = membersService.getEntity(MembersEntity.class, members.getId());
+      //密码解密
+      String pString = PasswordUtil.decrypt(members.getPassword(), members.getPhone(), PasswordUtil.getStaticSalt());
+      members.setPassword(pString);
       req.setAttribute("membersPage", members);
     }
     if(req.getParameter("load") != null && req.getParameter("load").equals("detail")) {
