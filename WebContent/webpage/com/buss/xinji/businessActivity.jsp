@@ -11,7 +11,7 @@
     <link href="plug-in/jquery-plugs/fileupload/css/dropzone.css" type="text/css" rel="stylesheet" />
     <script src="plug-in/jquery-plugs/fileupload/js/xj.uploadfunction.js"></script>
   </head>
-  <body style="overflow-y: hidden" scroll="no">
+  <body style="overflow-y: scroll">
     <t:formvalid formid="formobj" dialog="true" usePlugin="password" layout="table" action="businessActivityController.do?save">
       <input id="id" name="id" type="hidden" value="${businessActivityPage.id }">
       <table style="width: 1200px;" cellpadding="0" cellspacing="1" class="formtable">
