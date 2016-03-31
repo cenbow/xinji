@@ -22,6 +22,7 @@ import org.jeecgframework.core.util.oConvertUtils;
 import org.jeecgframework.tag.core.easyui.TagUtil;
 import org.jeecgframework.web.system.pojo.base.TSDepart;
 import org.jeecgframework.web.system.service.SystemService;
+import org.jeecgframework.core.util.DateUtils;
 import org.jeecgframework.core.util.MyBeanUtils;
 import org.jeecgframework.core.util.PasswordUtil;
 
@@ -137,6 +138,7 @@ public class MembersController extends BaseController {
       }
     } else {
       message = "会员添加成功";
+      members.setMemberNo("xj_"+DateUtils.getDataString(DateUtils.yyyymmddhhmmss)+StringUtil.random(6));
       membersService.save(members);
       systemService.addLog(message, Globals.Log_Type_INSERT, Globals.Log_Leavel_INFO);
     }
@@ -155,8 +157,8 @@ public class MembersController extends BaseController {
       members = membersService.getEntity(MembersEntity.class, members.getId());
       //密码解密
       String pString = PasswordUtil.decrypt(members.getPassword(), members.getPhone(), PasswordUtil.getStaticSalt());
-      members.setPassword(pString);
       req.setAttribute("membersPage", members);
+      req.setAttribute("password", pString);
     }
     if(req.getParameter("load") != null && req.getParameter("load").equals("detail")) {
       req.setAttribute("isDetail", 1);

@@ -24,7 +24,7 @@
             <label class="Validform_label">登录密码:</label>
           </td>
           <td class="value">
-            <input class="inputxt" id="password" name="password" datatype="*" type="password" value="${membersPage.password}">
+            <input class="inputxt" id="password" name="password" datatype="*" type="password" value="${password}">
             <span class="Validform_checktip"></span>
           </td>
         </tr>
