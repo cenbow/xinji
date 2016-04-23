@@ -45,6 +45,8 @@ public class GroupBuyingEntity implements java.io.Serializable {
   private BigDecimal price;
   /**单位*/
   private java.lang.String unit;
+  /**标签分类*/
+  private java.lang.String tag;
   /**详情，富文本*/
   private java.lang.String description;
   /**开团人数，达到多少人便成团，以下单的人数为准*/
@@ -204,6 +206,24 @@ public class GroupBuyingEntity implements java.io.Serializable {
   public void setUnit(java.lang.String unit){
     this.unit = unit;
   }
+  
+  /**
+   *方法: 取得java.lang.String
+   *@return: java.lang.String  标签/分类，多个以（|）分隔
+   */
+  @Column(name ="TAG",nullable=true,length=1000)
+  public java.lang.String getTag() {
+    return tag;
+  }
+
+  /**
+   *方法: 设置java.lang.String
+   *@param: java.lang.String  标签/分类，多个以（|）分隔
+   */
+  public void setTag(java.lang.String tag) {
+    this.tag = tag;
+  }
+
   /**
    *方法: 取得java.lang.Object
    *@return: java.lang.Object  详情，富文本

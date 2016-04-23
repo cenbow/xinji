@@ -12,6 +12,7 @@
      <t:dgCol title="原价" field="originalPrice"   width="120"></t:dgCol>
      <t:dgCol title="价格" field="price"   width="120"></t:dgCol>
      <t:dgCol title="单位" field="unit"   width="120"></t:dgCol>
+     <t:dgCol title="分类" field="tag" dictionary="gbTags" width="80"></t:dgCol>
 <%--      <t:dgCol title="详情，富文本" field="description"   width="120"></t:dgCol> --%>
      <t:dgCol title="开团人数" field="groupLimit"   width="120"></t:dgCol>
      <t:dgCol title="开始时间" field="startDate" formatter="yyyy-MM-dd"  width="120"></t:dgCol>

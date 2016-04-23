@@ -267,6 +267,7 @@ create table xj_group_buying
    original_price       decimal(10,2) comment '原价，订单上的对应原价以此为准（每次团购价可能不一样）',
    price                decimal(10,2) comment '价格，订单上的对应现价以此为准（每次团购价可能不一样）',
    unit                 varchar(20) comment '单位',
+   tag                  varchar(1000) comment '标签或分类，多个以（|）分隔',
    description          text comment '详情，富文本',
    group_limit          int comment '开团人数，达到多少人便成团，以下单的人数为准',
    start_date           datetime comment '开始时间，团购开放时间',

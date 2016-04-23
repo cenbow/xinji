@@ -117,8 +117,15 @@
           <td align="right">
             <label class="Validform_label">状态:</label>
           </td>
-          <td class="value" colspan="3">
+          <td class="value">
             <t:dictSelect field="status" typeGroupCode="status" hasLabel="false" defaultVal="${groupBuyingPage.status}" ></t:dictSelect>
+            <span class="Validform_checktip"></span>
+          </td>
+          <td align="right">
+            <label class="Validform_label">标签分类:</label>
+          </td>
+          <td class="value">
+            <t:dictSelect field="tag" typeGroupCode="gbTags" hasLabel="false" defaultVal="${groupBuyingPage.tag}" ></t:dictSelect>
             <span class="Validform_checktip"></span>
           </td>
         </tr>
