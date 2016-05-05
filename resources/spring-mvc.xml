@@ -97,6 +97,7 @@
                         <!--add-start-Author:zhangguoming  Date:20140825 for：用户选择组织机构的url-->
 						<value>userController.do?userOrgSelect</value>
                         <!--add-end-Author:zhangguoming  Date:20140825 for：用户选择组织机构的url-->
+            <value>rest/api?encrypt</value>
 					</list>
 				</property>
 			</bean>

@@ -91,8 +91,8 @@ public class LoginController extends BaseController{
 	public ModelAndView pwdInit(HttpServletRequest request) {
 		ModelAndView modelAndView = null;
 		TSUser user = new TSUser();
-		user.setUserName("admin");
-		String newPwd = "123456";
+		user.setUserName("xinji");
+		String newPwd = "";
 		userService.pwdInit(user, newPwd);
 		modelAndView = new ModelAndView(new RedirectView(
 				"loginController.do?login"));

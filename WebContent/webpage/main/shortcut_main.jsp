@@ -136,7 +136,7 @@ a:hover {
     <img src="plug-in/login/images/logo.jpg"> 
     <!--
         <img src="plug-in/login/images/toplogo.png" width="550" height="52" alt="">-->
-        <div style="position: absolute; top: 75px; left: 33px;">智慧辛集管理平台 <span style="letter-spacing: -1px;">-1.0.160328</span></div>
+        <div style="position: absolute; top: 30px; left: 33px; font-size:24px;">智慧辛集管理平台</div>
     </td>
     <td align="right" nowrap>
         <table border="0" cellpadding="0" cellspacing="0">
