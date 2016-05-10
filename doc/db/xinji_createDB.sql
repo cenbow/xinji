@@ -336,7 +336,7 @@ create table xj_news
    id                   varchar(50) not null comment '主键',
    title                varchar(1000) comment '标题',
    sub_title            varchar(1000) comment '副标题',
-   category             varchar(20) comment '分类：辛集资讯-0，办事指南-1，劳务招聘-2，劳务维权-3，劳务政策-4，个人求职-5，辛集热点-6',
+   category             varchar(20) comment '分类：辛集资讯-0，办事指南-1，劳务招聘-2，劳务维权-3，劳务政策-4，个人求职-5，辛集热点-6，本地号码-7，本地旅游-8',
    thumbnail            varchar(1000) comment '缩略图，列表上显示',
    author               varchar(200) comment '发布人名称',
    from_unit            varchar(200) comment '来源，来自哪里',
