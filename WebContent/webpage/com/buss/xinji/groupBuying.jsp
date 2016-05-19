@@ -118,7 +118,7 @@
             <label class="Validform_label">状态:</label>
           </td>
           <td class="value">
-            <t:dictSelect field="status" typeGroupCode="status" hasLabel="false" defaultVal="${groupBuyingPage.status}" ></t:dictSelect>
+            <t:dictSelect field="status" typeGroupCode="gbStatus" hasLabel="false" defaultVal="${groupBuyingPage.status}" ></t:dictSelect>
             <span class="Validform_checktip"></span>
           </td>
           <td align="right">

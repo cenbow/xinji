@@ -19,7 +19,7 @@
      <t:dgCol title="结束时间" field="endDate" formatter="yyyy-MM-dd"  width="120"></t:dgCol>
      <t:dgCol title="运费（元）" field="shipAmount"   width="120"></t:dgCol>
      <t:dgCol title="当前人数" field="currentNum"   width="120"></t:dgCol>
-     <t:dgCol title="状态" field="status" dictionary="status" width="80"></t:dgCol>
+     <t:dgCol title="状态" field="status" dictionary="gbStatus" width="80"></t:dgCol>
      <t:dgCol title="操作" field="opt" width="140"></t:dgCol>
      <t:dgDelOpt title="删除" url="groupBuyingController.do?del&id={id}" />
      <t:dgFunOpt funname="groupProductList(id,title)" title="商品列表"></t:dgFunOpt>
