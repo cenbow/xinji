@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      MySQL 5.0                                    */
-/* Created on:     2016/5/23 17:14:35                           */
+/* Created on:     2016/3/24 15:13:28                           */
 /*==============================================================*/
 
 
@@ -9,8 +9,6 @@ drop table if exists xj_ad_info;
 drop table if exists xj_ad_place;
 
 drop table if exists xj_address;
-
-drop table if exists xj_app_info;
 
 drop table if exists xj_business_activity;
 
@@ -120,29 +118,6 @@ create table xj_address
 );
 
 alter table xj_address comment '地址信息表';
-
-/*==============================================================*/
-/* Table: xj_app_info                                           */
-/*==============================================================*/
-create table xj_app_info
-(
-   id                   varchar(50) not null comment '主键',
-   name                 varchar(200),
-   version              varchar(50),
-   type                 varchar(10),
-   build_url            varchar(1000),
-   build_size           bigint,
-   description          varchar(500),
-   create_by            varchar(50) comment '创建人登录名称',
-   create_name          varchar(50) comment '创建人名字',
-   create_date          datetime comment '创建日期',
-   update_by            varchar(50) comment '更新人登录名称',
-   update_name          varchar(50) comment '更新人名字',
-   update_date          datetime comment '更新日期',
-   primary key (id)
-);
-
-alter table xj_app_info comment 'app build信息';
 
 /*==============================================================*/
 /* Table: xj_business_activity                                  */
