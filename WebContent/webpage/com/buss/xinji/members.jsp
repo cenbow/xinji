@@ -57,6 +57,24 @@
             <span class="Validform_checktip"></span>
           </td>
         </tr>
+        <tr>
+          <td align="right">
+            <label class="Validform_label">性别:</label>
+          </td>
+          <td class="value">
+            <t:dictSelect field="sex" typeGroupCode="sex" hasLabel="false" defaultVal="${membersPage.sex}" ></t:dictSelect>
+            <span class="Validform_checktip"></span>
+          </td>
+        </tr>
+        <tr>
+          <td align="right">
+            <label class="Validform_label">电子邮箱:</label>
+          </td>
+          <td class="value">
+            <input class="inputxt" id="email" name="email" ignore="ignore" value="${membersPage.email}">
+            <span class="Validform_checktip"></span>
+          </td>
+        </tr>
       </table>
     </t:formvalid>
  </body>

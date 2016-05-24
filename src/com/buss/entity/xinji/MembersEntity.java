@@ -1,19 +1,14 @@
 package com.buss.entity.xinji;
 
-import java.math.BigDecimal;
-import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.GenericGenerator;
-import javax.persistence.SequenceGenerator;
 
 /**   
  * @Title: Entity
@@ -41,6 +36,10 @@ public class MembersEntity implements java.io.Serializable {
   private java.lang.String status;
   /**会员昵称*/
   private java.lang.String nickName;
+  /**性别*/
+  private java.lang.String sex;
+  /**电子邮箱*/
+  private java.lang.String email;
   /**创建人登录名称*/
   private java.lang.String createBy;
   /**创建人名字*/
@@ -154,6 +153,40 @@ public class MembersEntity implements java.io.Serializable {
   public void setNickName(java.lang.String nickName){
     this.nickName = nickName;
   }
+  /**
+   *方法: 取得java.lang.String
+   *@return: java.lang.String  性别
+   */
+  @Column(name ="SEX",nullable=true,length=20)
+  public java.lang.String getSex() {
+    return sex;
+  }
+  
+  /**
+   *方法: 设置java.lang.String
+   *@param: java.lang.String  性别
+   */
+  public void setSex(java.lang.String sex) {
+    this.sex = sex;
+  }
+
+  /**
+   *方法: 取得java.lang.String
+   *@return: java.lang.String  电子邮箱
+   */
+  @Column(name ="EMAIL",nullable=true,length=50)
+  public java.lang.String getEmail() {
+    return email;
+  }
+
+  /**
+   *方法: 设置java.lang.String
+   *@param: java.lang.String  电子邮箱
+   */
+  public void setEmail(java.lang.String email) {
+    this.email = email;
+  }
+
   /**
    *方法: 取得java.lang.String
    *@return: java.lang.String  创建人登录名称

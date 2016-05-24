@@ -62,6 +62,17 @@
             <span class="Validform_checktip"></span>
           </td>
         </tr>
+        <tr>
+          <td align="right">
+            <label class="Validform_label">资讯栏目:</label>
+          </td>
+          <td class="value">
+            <c:forEach items="${categoryList}" var="category">
+              <input type="checkbox" name="categoryids" value="${category.id}" <c:if test="${fn:contains(govDepartmentPage.categoryIds, category.id)}">checked="checked"</c:if>>${category.name}<br>
+            </c:forEach>
+            <span class="Validform_checktip"></span>
+          </td>
+        </tr>
       </table>
     </t:formvalid>
  </body>

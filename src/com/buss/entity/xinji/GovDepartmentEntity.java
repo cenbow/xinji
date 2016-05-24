@@ -1,19 +1,14 @@
 package com.buss.entity.xinji;
 
-import java.math.BigDecimal;
-import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.GenericGenerator;
-import javax.persistence.SequenceGenerator;
 
 /**   
  * @Title: Entity
@@ -41,6 +36,8 @@ public class GovDepartmentEntity implements java.io.Serializable {
   private java.lang.Integer sortOrder;
   /**状态，启用：1，停用：0*/
   private java.lang.String status;
+  /**栏目id，多个以|分隔*/
+  private java.lang.String categoryIds;
   /**创建人登录名称*/
   private java.lang.String createBy;
   /**创建人名字*/
@@ -153,6 +150,14 @@ public class GovDepartmentEntity implements java.io.Serializable {
    */
   public void setStatus(java.lang.String status){
     this.status = status;
+  }
+  @Column(name ="CATEGORY_IDS",nullable=true,length=2000)
+  public java.lang.String getCategoryIds() {
+    return categoryIds;
+  }
+
+  public void setCategoryIds(java.lang.String categoryIds) {
+    this.categoryIds = categoryIds;
   }
   /**
    *方法: 取得java.lang.String

@@ -10,6 +10,8 @@
    <t:dgCol title="会员号" field="memberNo"   width="120"></t:dgCol>
    <t:dgCol title="状态" field="status" dictionary="status"  width="120"></t:dgCol>
    <t:dgCol title="会员昵称" field="nickName"   width="120"></t:dgCol>
+   <t:dgCol title="性别" field="sex" dictionary="sex" width="80"></t:dgCol>
+   <t:dgCol title="电子邮箱" field="email"   width="120"></t:dgCol>
    <t:dgCol title="操作" field="opt" width="100"></t:dgCol>
    <t:dgDelOpt title="删除" url="membersController.do?del&id={id}" />
    <t:dgToolBar title="录入" icon="icon-add" url="membersController.do?addorupdate" funname="add"></t:dgToolBar>
