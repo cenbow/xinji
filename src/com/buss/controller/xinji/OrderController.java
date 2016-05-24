@@ -101,7 +101,10 @@ public class OrderController extends BaseController {
         if (cfe.getAddressId() != null && !"".equals(cfe.getAddressId())) {
           AddressEntity address = systemService.get(AddressEntity.class, cfe.getAddressId());
           if (address != null) {
-            cfe.setAddressDetail(oConvertUtils.getString(address.getProvince())+oConvertUtils.getString(address.getCity())+oConvertUtils.getString(address.getDistrict())+oConvertUtils.getString(address.getDetailLocation()));
+            String addr = oConvertUtils.getString(address.getProvince())+oConvertUtils.getString(address.getCity())+oConvertUtils.getString(address.getDistrict())+oConvertUtils.getString(address.getDetailLocation());
+            String zip = oConvertUtils.getString(address.getZipCode());
+            zip = oConvertUtils.isEmpty(zip) ? "" : "("+zip+")";
+            cfe.setAddressDetail(addr+zip);
           }
         }
         
@@ -174,7 +177,10 @@ public class OrderController extends BaseController {
       if(StringUtil.isNotEmpty(order.getAddressId())) {
         AddressEntity address = systemService.get(AddressEntity.class, order.getAddressId());
         if(address != null) {
-          req.setAttribute("addressDetail", oConvertUtils.getString(address.getProvince())+oConvertUtils.getString(address.getCity())+oConvertUtils.getString(address.getDistrict())+oConvertUtils.getString(address.getDetailLocation()));
+          String addr = oConvertUtils.getString(address.getProvince())+oConvertUtils.getString(address.getCity())+oConvertUtils.getString(address.getDistrict())+oConvertUtils.getString(address.getDetailLocation());
+          String zip = oConvertUtils.getString(address.getZipCode());
+          zip = oConvertUtils.isEmpty(zip) ? "" : "("+zip+")";
+          req.setAttribute("addressDetail", addr+zip);
         }
       }
       req.setAttribute("orderPage", order);
