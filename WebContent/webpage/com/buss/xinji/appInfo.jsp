@@ -47,7 +47,7 @@
             <label class="Validform_label">Build文件:</label>
           </td>
           <td class="value">
-            <input class="inputxt xj_uploader_input" id="buildUrl" name="buildUrl" value="${appInfoPage.buildUrl}" placeholder="点击选择文件" datatype="*">
+            <input class="inputxt xj_uploader_input" id="buildUrl" name="buildUrl" value="${appInfoPage.buildUrl}" placeholder="点击选择文件" >
             <input class="file_uploader" type="file" name="files[]" data-url="fileUploaderController.do?upload&folder=app" style="display:none;" forinput='buildUrl'>
             <span class="Validform_checktip"></span>
           </td>
