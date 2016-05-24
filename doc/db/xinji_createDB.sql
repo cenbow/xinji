@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      MySQL 5.0                                    */
-/* Created on:     2016/5/23 17:14:35                           */
+/* Created on:     2016/5/25 1:49:28                            */
 /*==============================================================*/
 
 
@@ -127,12 +127,12 @@ alter table xj_address comment '地址信息表';
 create table xj_app_info
 (
    id                   varchar(50) not null comment '主键',
-   name                 varchar(200),
-   version              varchar(50),
-   type                 varchar(10),
-   build_url            varchar(1000),
-   build_size           bigint,
-   description          varchar(500),
+   name                 varchar(200) comment '名称',
+   version              varchar(50) comment '版本号',
+   type                 varchar(10) comment '类型，1-Android，2-IOS',
+   build_url            varchar(1000) comment 'build链接地址',
+   build_size           bigint comment 'build大小',
+   description          varchar(500) comment '简介',
    create_by            varchar(50) comment '创建人登录名称',
    create_name          varchar(50) comment '创建人名字',
    create_date          datetime comment '创建日期',
