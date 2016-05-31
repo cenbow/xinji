@@ -69,7 +69,7 @@
           <td class="value">
 <!--             <input class="inputxt" id="adContent" name="adContent"  -->
 <%--                  value="${adPage.adContent}"> --%>
-            <t:ckeditor name="adContent" isfinder="false" type="width:1000" value="${adPage.adContent}"></t:ckeditor>
+            <t:ckeditor name="adContent" isfinder="true" type="width:1000" value="${adPage.adContent}"></t:ckeditor>
             <span class="Validform_checktip"></span>
           </td>
         </tr>

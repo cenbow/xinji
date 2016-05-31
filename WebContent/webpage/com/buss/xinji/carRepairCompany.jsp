@@ -58,7 +58,7 @@
             <label class="Validform_label">详细内容:</label>
           </td>
           <td class="value">
-            <t:ckeditor name="content" isfinder="false" type="width:1000" value="${carRepairCompanyPage.content}"></t:ckeditor>
+            <t:ckeditor name="content" isfinder="true" type="width:1000" value="${carRepairCompanyPage.content}"></t:ckeditor>
             <span class="Validform_checktip"></span>
           </td>
         </tr>

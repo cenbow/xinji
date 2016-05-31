@@ -86,7 +86,7 @@
             <label class="Validform_label">资讯内容:</label>
           </td>
           <td class="value">
-            <t:ckeditor name="contents" isfinder="false" type="width:1000" value="${newsPage.contents}"></t:ckeditor>
+            <t:ckeditor name="contents" isfinder="true" type="width:1000" value="${newsPage.contents}"></t:ckeditor>
             <span class="Validform_checktip"></span>
           </td>
         </tr>

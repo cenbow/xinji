@@ -94,7 +94,7 @@
             <label class="Validform_label">商品详情:</label>
           </td>
           <td class="value">
-            <t:ckeditor name="description" isfinder="false" type="width:1000" value="${productPage.description}"></t:ckeditor>
+            <t:ckeditor name="description" isfinder="true" type="width:1000" value="${productPage.description}"></t:ckeditor>
             <span class="Validform_checktip"></span>
           </td>
         </tr>

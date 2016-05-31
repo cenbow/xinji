@@ -134,7 +134,7 @@
             <label class="Validform_label">团购详情:</label>
           </td>
           <td class="value" colspan="3">
-            <t:ckeditor name="description" isfinder="false" type="width:900" value="${groupBuyingPage.description}"></t:ckeditor>
+            <t:ckeditor name="description" isfinder="true" type="width:900" value="${groupBuyingPage.description}"></t:ckeditor>
             <span class="Validform_checktip"></span>
           </td>
         </tr>
