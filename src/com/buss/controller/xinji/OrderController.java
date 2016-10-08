@@ -82,10 +82,10 @@ public class OrderController extends BaseController {
    */
 
   @RequestMapping(params = "datagrid")
-  public void datagrid(OrderEntity order,HttpServletRequest request, HttpServletResponse response, DataGrid dataGrid) {
+  public void datagrid(OrderEntity orderObj,HttpServletRequest request, HttpServletResponse response, DataGrid dataGrid) {
     CriteriaQuery cq = new CriteriaQuery(OrderEntity.class, dataGrid);
     //查询条件组装器
-    org.jeecgframework.core.extend.hqlsearch.HqlGenerateUtil.installHql(cq, order);
+    org.jeecgframework.core.extend.hqlsearch.HqlGenerateUtil.installHql(cq, orderObj);
     this.orderService.getDataGridReturn(cq, true);
     //遍历设置会员和地址
     List<OrderEntity> cfeList = new ArrayList<OrderEntity>();

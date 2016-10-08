@@ -6,7 +6,7 @@
   <t:datagrid name="orderList" fitColumns="true" title="订单" actionUrl="orderController.do?datagrid" idField="id" fit="true">
    <t:dgCol title="编号" field="id" hidden="true"></t:dgCol>
    <t:dgCol title="订单号" field="orderCode" width="120" ></t:dgCol>
-   <t:dgCol title="会员" field="memberName" width="120" ></t:dgCol>
+   <t:dgCol title="会员" field="memberName" width="120" sortable="false" ></t:dgCol>
 <%--    <t:dgCol title="地址ID" field="addressDetail" ></t:dgCol> --%>
    <t:dgCol title="订单金额" field="orderAmount" width="120" ></t:dgCol>
    <t:dgCol title="商品金额" field="productAmount" width="120" ></t:dgCol>
